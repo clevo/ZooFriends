@@ -1,0 +1,13 @@
+digraph "C:/Users/denis/Desktop/gfs/mvnZoo/zoofriends" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_177ac803429c9d36b1b222778373940e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="mvnZoo" fontname="Helvetica", fontsize="10", URL="dir_177ac803429c9d36b1b222778373940e.html"]
+  subgraph clusterdir_fcec3ef0851e42ca8e3a8ffe37c21ec2 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_fcec3ef0851e42ca8e3a8ffe37c21ec2.html"];
+    dir_fcec3ef0851e42ca8e3a8ffe37c21ec2 [shape=plaintext label="zoofriends"];
+    dir_bfde268abee3adb063197b74a693cf50 [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_bfde268abee3adb063197b74a693cf50.html"];
+  }
+  }
+}

@@ -1,0 +1,10 @@
+digraph "C:/Users/denis/Desktop/gfs/mvnZoo" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_177ac803429c9d36b1b222778373940e {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_177ac803429c9d36b1b222778373940e.html"];
+    dir_177ac803429c9d36b1b222778373940e [shape=plaintext label="mvnZoo"];
+    dir_fcec3ef0851e42ca8e3a8ffe37c21ec2 [shape=box label="zoofriends" color="red" fillcolor="white" style="filled" URL="dir_fcec3ef0851e42ca8e3a8ffe37c21ec2.html"];
+  }
+}
