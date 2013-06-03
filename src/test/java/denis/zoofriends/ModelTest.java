@@ -190,7 +190,62 @@ public class ModelTest {
 		assertTrue(model.getAnimalsAndFriendsItLost().get(a3).contains(a1));
 	}
 
+	@Test
+	public void testRemoveFriendNotFromTheList() {
+		Model model = new Model();
+		Animal a1 = new Parrot("Parrot one", "grains", 0.2, true);
+		Animal a2 = new Parrot("Parrot two", "corn", 0.5, false);
+		Animal a3 = new Dog("Dog 1", "meat", "sleaping dog");
+		model.addAnimal(a1);
+		model.addAnimal(a2);
+		model.addFriend(a1, a2);
+		assertEquals(1, a1.getFriends().size());
+		assertEquals(1, a2.getFriends().size());
+		assertEquals(0, a3.getFriends().size());
+		assertEquals(2, model.getAnimalsAndFriendsItGain().size());
+		assertEquals(0, model.getAnimalsAndFriendsItLost().size());
+		//run
+		model.removeFriend(a1, a3);
+		//verify
+		assertEquals(1, a1.getFriends().size());
+		assertEquals(1, a2.getFriends().size());
+		assertEquals(0, a3.getFriends().size());
+		assertEquals(2, model.getAnimalsAndFriendsItGain().size());
+		assertEquals(0, model.getAnimalsAndFriendsItLost().size());
+	}
 
+	@Test
+	public void testRemoveFriendNullValue() {
+		Model model = new Model();
+		Animal a1 = new Parrot("Parrot one", "grains", 0.2, true);
+		Animal a2 = new Parrot("Parrot two", "corn", 0.5, false);
+		Animal a3 = new Dog("Dog 1", "meat", "sleaping dog");
+		model.addAnimal(a1);
+		model.addAnimal(a2);
+		model.addFriend(a1, a2);
+		assertEquals(1, a1.getFriends().size());
+		assertEquals(1, a2.getFriends().size());
+		assertEquals(0, a3.getFriends().size());
+		assertEquals(2, model.getAnimalsAndFriendsItGain().size());
+		assertEquals(0, model.getAnimalsAndFriendsItLost().size());
+		//run
+		model.removeFriend(a1, null);
+		//verify
+		assertEquals(1, a1.getFriends().size());
+		assertEquals(1, a2.getFriends().size());
+		assertEquals(0, a3.getFriends().size());
+		assertEquals(2, model.getAnimalsAndFriendsItGain().size());
+		assertEquals(0, model.getAnimalsAndFriendsItLost().size());
+		//run
+		model.removeFriend(null, null);
+		//verify
+		assertEquals(1, a1.getFriends().size());
+		assertEquals(1, a2.getFriends().size());
+		assertEquals(0, a3.getFriends().size());
+		assertEquals(2, model.getAnimalsAndFriendsItGain().size());
+		assertEquals(0, model.getAnimalsAndFriendsItLost().size());
+	}
+	
 	@Test
 	public void testGetDayNumberMoveToNextDay() {
 		Model model = new Model();
