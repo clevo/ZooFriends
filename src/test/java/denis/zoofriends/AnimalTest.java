@@ -22,6 +22,7 @@ public class AnimalTest {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Test
 	public void testSetNameWhiteBox() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		// MyClass is tested
